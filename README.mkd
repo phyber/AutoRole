@@ -1,0 +1,4 @@
+AutoRole
+--------
+AutoRole is a World of Warcraft addon that automatically sets your role during a roll poll, based on your current spec.
+
