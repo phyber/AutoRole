@@ -1,7 +1,7 @@
 ## Interface: 50100
 ## Title: AutoRole
 ## Author: phyber
-## Notes: Automatically sets your role during a roll poll based on your current spec.
+## Notes: Automatically sets your role during a role poll based on your current spec.
 ## Version: @project-version@
 ## X-Category: Interface Enhancements
 

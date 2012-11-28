@@ -6,9 +6,9 @@ local GetSpecialization = GetSpecialization
 local GetSpecializationInfo = GetSpecializationInfo
 local StaticPopupSpecial_Hide = StaticPopupSpecial_Hide
 
-AutoRole:RegisterEvent("ROLL_POLL_BEGIN")
+AutoRole:RegisterEvent("ROLE_POLL_BEGIN")
 
-local function ROLL_POLL_BEGIN(frame, event, ...)
+local function ROLE_POLL_BEGIN(frame, event, ...)
 	-- Get our current spec.
 	local specIndex = GetSpecialization()
 
@@ -19,8 +19,8 @@ local function ROLL_POLL_BEGIN(frame, event, ...)
 	-- Set our current role.
 	UnitSetRole("player", specRole)
 
-	-- Close the Roll Poll popup
-	StaticPopupSpecial_Hide(RollPollPopup)
+	-- Close the Role Poll popup
+	StaticPopupSpecial_Hide(RolePollPopup)
 end
 
-AutoRole:SetScript("OnEvent", ROLL_POLL_BEGIN)
+AutoRole:SetScript("OnEvent", ROLE_POLL_BEGIN)
