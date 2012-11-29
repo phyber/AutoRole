@@ -7,8 +7,9 @@ local GetSpecializationInfo = GetSpecializationInfo
 local StaticPopupSpecial_Hide = StaticPopupSpecial_Hide
 
 AutoRole:RegisterEvent("ROLE_POLL_BEGIN")
+AutoRole:RegisterEvent("ACTIVE_TALENT_GROUP_CHANGED")
 
-local function ROLE_POLL_BEGIN(frame, event, ...)
+local function AutoRole_SetRole(frame, event, ...)
 	-- Get our current spec.
 	local specIndex = GetSpecialization()
 
@@ -22,8 +23,10 @@ local function ROLE_POLL_BEGIN(frame, event, ...)
 		UnitSetRole("player", specRole)
 
 		-- Close the Role Poll popup
-		StaticPopupSpecial_Hide(RolePollPopup)
+		if event == "ROLE_POLL_BEGIN" then
+			StaticPopupSpecial_Hide(RolePollPopup)
+		end
 	end
 end
 
-AutoRole:SetScript("OnEvent", ROLE_POLL_BEGIN)
+AutoRole:SetScript("OnEvent", AutoRole_SetRole)
