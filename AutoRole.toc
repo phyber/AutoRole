@@ -1,4 +1,4 @@
-## Interface: 70300
+## Interface: 80200
 ## Title: AutoRole
 ## Author: phyber
 ## Notes: Automatically sets your role during a role poll based on your current spec.
